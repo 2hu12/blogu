@@ -1,16 +1,20 @@
 {
   "name": "2blogu",
   "version": "0.0.1",
-  "description": "Not that light bug simple blog.",
+  "description": "Not that light but simple blog.",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhulongzheng/2blogu.git"
+  },
   "keywords": [
     "blog"
   ],
-  "author": "2hu",
-  "license": "ISC",
+  "author": "http://2hu.me",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.7.13",
     "del": "^1.2.0",
@@ -22,6 +26,6 @@
     "gulp-stylus": "^2.0.5",
     "gulp-util": "^3.0.6",
     "jade": "^1.11.0",
-    "lodash": "^3.10.0",
+    "lodash": "^3.10.0"
   }
 }
