@@ -7,7 +7,7 @@ init:
 	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
 	if [ ! -d ".git" ]; then git init; fi && \
 	if [ ! -z "${GIT}" ]; then git remote add origin ${GIT}; fi && \
-	npm install
+	cd .. && npm install
 
 addgit:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
