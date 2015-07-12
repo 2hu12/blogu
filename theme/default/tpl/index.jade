@@ -1,0 +1,24 @@
+extends base
+
+block vars
+  - list = list
+
+block content
+  .container
+    div.avatar
+
+    h3.head-name
+      em #{name}
+    //- h5.slogan #{slogan}
+
+    div.hr
+      span.left
+      span.astrik
+      span.right
+
+    //- hr
+
+    ul.lists
+      each article in list
+        li
+          a(href="#{article.path}") #{article.name}

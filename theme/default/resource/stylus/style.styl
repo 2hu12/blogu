@@ -1,0 +1,113 @@
+@require 'mixins'
+
+a:hover
+  text-decoration none
+  box-shadow 0 0.1px 0 #000
+
+.container,
+footer
+  width 650px
+  padding 2rem 1rem
+  margin 0 auto
+
+.container
+  .avatar
+    height 72px
+    width 72px
+    margin 1rem auto 0.5rem
+    border-radius 50%
+    background url("../../avatar.png") center no-repeat #2dbe60
+    background-size 45px
+
+  .hr
+    width 515px
+    margin 0 auto
+    overflow hidden
+
+    .left,
+    .right
+      position relative
+      bottom 10px
+      float left
+      display block
+      fn-size 20px, 245px
+      border-bottom 1px solid gray
+    .astrik
+      display block
+      vertical-align middle
+      float left
+      fn-size 20px, 23px
+      line-height 20px
+      font-size 20px
+      text-align center
+      color gray
+      background url("../pics/astrik.png") center no-repeat
+      background-size contain
+
+  h1
+  h2,
+  h3
+    margin 2rem auto 1rem
+
+  h1
+    text-align center
+
+  .head-name,
+  .slogan
+    text-align center
+
+  .head-name
+    margin 0 auto 1rem
+
+  .lists
+    text-align left
+    // text-align center
+    width 440px
+    margin 20px auto
+    list-style square
+
+    li
+      margin: 5px auto
+
+
+  pre
+    margin 1rem auto 1rem
+    overflow auto
+    overflow-scrolling touch
+
+footer
+  margin 20px auto 0
+  text-align center
+
+  .links
+    margin-right 15px
+
+
+@media screen and (max-width: 750px)
+  .container,
+  footer
+    width 550px
+
+  .container
+    .lists
+      width 440px
+
+@media screen and (max-width: 640px)
+  .container,
+  footer
+    width 300px
+    padding 2rem 0
+
+  .container
+    .lists
+      width 240px
+
+    .hr
+      width 300px
+
+      .left,
+      .right
+        width 140px
+
+      .astrik
+        width 20px

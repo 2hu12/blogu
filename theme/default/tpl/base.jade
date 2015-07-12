@@ -1,0 +1,38 @@
+block vars
+  - name = name
+  - description = description
+  - slogan = slogan
+  - email = email
+  - link = link
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(name='renderer', content='webkit')
+    meta(name='description', content='#{ description ? description : slogan }')
+    link(rel="icon", href="/favicon.ico")
+
+    title=name
+
+    block styles
+      link(rel='stylesheet', href='/resource/css/typo.css')
+      link(rel='stylesheet', href='/resource/css/style.css')
+
+  body
+    block content
+
+    //- .container
+    //-   a#gohome(href='/') 回到首页
+
+    block footer
+      footer
+        //- hr
+        a.links(href="/") Home
+        a.links(href="#{link}", target="_blank") Link
+        a.links(href="mailto:#{email}") Contact
+
+    block scripts
+      //- script(src='/theme/default/app.js')

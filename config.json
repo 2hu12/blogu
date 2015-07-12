@@ -1,0 +1,22 @@
+/**
+ * options below:
+ * name
+ * slogan
+ * description
+ * theme
+ * email
+ * link
+ * git
+ * domain
+ */
+
+{
+  "name": "2blogu"
+, "slogan": "To Blog Who"
+, "description": "Blog"
+, "theme": "default"
+, "email": "yourname@example.com"
+, "link": "http://whatever.com"
+, "git": "git@github.com:example/example.github.io.git"
+, "domain": "my.domain"
+}

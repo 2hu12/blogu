@@ -1,0 +1,58 @@
+fn-size(height, width)
+  height height
+  width width
+
+horizon-center()
+  position absolute
+  left 0
+  right 0
+  margin 5rem auto
+
+fn-inline-block()
+  display inline-block
+  vertical-align middle
+  *vertical-align auto
+  *zoom 1
+  *display inline
+
+fn-word-len-limit($max)
+  fn-inline-block()
+  vertical-align middle
+  max-width $max
+  text-overflow ellipsis
+  -ms-text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+  -ms-transition arguments
+  -o-transition arguments
+  transition arguments
+
+transform()
+  -webkit-transform arguments
+  -moz-transform arguments
+  -ms-transform arguments
+  -o-transform arguments
+  transform arguments
+
+animation()
+  -webkit-animation arguments
+  -moz-animation arguments
+  -ms-animation arguments
+  -o-animation arguments
+  animation arguments
+
+
+spin()
+  @keyframes spin {
+      0% {
+          transform rotate(0deg)
+      }
+
+      100% {
+          transform rotate(90deg)
+      }
+  }
