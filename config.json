@@ -1,18 +1,6 @@
-/**
- * options below:
- * name
- * slogan
- * description
- * theme
- * email
- * link
- * git
- * domain
- */
-
 {
-  "name": "2BLOGU"
-, "slogan": "To Blog Who"
+  "name": "BLOGU"
+, "slogan": "Blog Woo"
 , "description": "Blog"
 , "theme": "default"
 , "email": "yourname@example.com"
