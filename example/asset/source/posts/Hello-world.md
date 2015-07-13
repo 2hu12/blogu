@@ -118,6 +118,11 @@ In case you want to reconfig git branch:
 $ make editbr
 ```
 
+In case you want to reconfig domain:
+```bash
+$ make adddomain
+```
+
 ---
 Hope you enjoy it : )
 

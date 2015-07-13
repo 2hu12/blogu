@@ -42,7 +42,7 @@ editbr:
 adddomain:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
 	cd dist && \
-	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
+	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi
 
 post:
 	gulp new --name "${name}" --silent
