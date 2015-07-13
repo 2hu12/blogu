@@ -22,6 +22,10 @@ $ git clone https://github.com/zhulongzheng/blogu.git myblog
 #### 2. Configuration
 
 Config your `config.json`
+```bash
+$ cd myblog
+$ cp example/config.json config.json
+```
 
 | OPTIONS        | FOR                  |
 | :------------- | :------------------- |
@@ -43,7 +47,6 @@ page, branch should be `master`.
 then
 
 ```bash
-$ cd myblog
 $ make init
 ```
 > tip: The `make init` better use for only once. If you forget some
@@ -98,13 +101,22 @@ $ make dev
 ```
 
 #### 8. Some Remedy
+Reconfig your config.json.
 
-In case you forget config git repo,
+In case you forget to config git repo befor you run `make init`:
 ```bash
 $ make addgit
 ```
 
+In case you want to reconfig git repo:
+```bash
+$ make editgit
+```
 
+In case you want to reconfig git branch:
+```bash
+$ make editbr
+```
 
 ---
 Hope you enjoy it : )
