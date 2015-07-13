@@ -4,6 +4,7 @@ BRANCH = $(shell cat config.json | grep -o \"branch.*\" | cut -d"\"" -f4)
 REPOTYPE = $(shell cat config.json | grep -o \"repotype.*\" | cut -d"\"" -f4)
 DOMAIN = $(shell cat config.json | grep -o \"domain.*\" | cut -d"\"" -f4)
 TESTBR = $(shell ls dist/.git/refs/heads | grep "$(BRANCH)")
+NOW = $(shell date "+%Y-%m-%d %H:%M:%S")
 init:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
 	cp -R example/asset/source source && \
@@ -29,6 +30,15 @@ editgit:
 	cd dist && \
 	if [ ! -z "${GIT}" ]; then git remote set-url origin ${GIT}; fi
 
+editbr:
+	cd dist && \
+	if [ ! -z "${BRANCH}" ] && [ ! -z "${TESTBR}" ]; then \
+		git checkout ${BRANCH}; \
+	fi && \
+	if [ ! -z "${BRANCH}" ] && [ -z "${TESTBR}" ]; then \
+		git checkout -b ${BRANCH}; \
+	fi
+
 adddomain:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
 	cd dist && \
@@ -49,7 +59,6 @@ gen:
 g:
 	gulp gen --silent
 
-NOW = $(shell date "+%Y-%m-%d %H:%M:%S")
 deploy:
 	cd dist && git add --all && git commit -a -m "Site Update: ${NOW}" && \
 	if [ ! -z "${BRANCH}" ]; then \

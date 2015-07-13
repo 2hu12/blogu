@@ -19,7 +19,7 @@ $ mkdir myblog
 $ git clone https://github.com/zhulongzheng/blogu.git myblog
 ```
 
-#### 2. Configiration
+#### 2. Configuration
 
 Config your `config.json`
 
@@ -35,12 +35,19 @@ Config your `config.json`
 | branch         | git repo branch      |
 | domain(option) | blog domain          |
 
-and then
+> tip: You can use github and gitcafe pages service, so the branch option is
+required, and if you use github page for project, `branch` should be `gh-pages`,
+and for gitcafe, `gitcafe-pages`. Or if you want to consume the only user `io`
+page, branch should be `master`.
+
+then
 
 ```bash
 $ cd myblog
 $ make init
 ```
+> tip: The `make init` better use for only once. If you forget some
+configuration, check out the [remedy](#8-some-remedy).
 
 
 #### 3. Write A New Post
@@ -89,6 +96,15 @@ $ make d
 ```bash
 $ make dev
 ```
+
+#### 8. Some Remedy
+
+In case you forget config git repo,
+```bash
+$ make addgit
+```
+
+
 
 ---
 Hope you enjoy it : )
