@@ -18,8 +18,8 @@ html
     title=name
 
     block styles
-      link(rel='stylesheet', href='/resource/css/typo.css')
-      link(rel='stylesheet', href='/resource/css/style.css')
+      link(rel='stylesheet', href='./resource/css/typo.css')
+      link(rel='stylesheet', href='./resource/css/style.css')
 
   body
     block content
@@ -30,7 +30,8 @@ html
     block footer
       footer
         //- hr
-        a.links(href="/") Home
+        block homeref
+          a.links(href="./") Home
         a.links(href="#{link}", target="_blank") Link
         a.links(href="mailto:#{email}") Contact
 

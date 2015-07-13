@@ -3,5 +3,12 @@ extends base
 block append vars
   - content = content
 
+block styles
+  link(rel='stylesheet', href='../resource/css/typo.css')
+  link(rel='stylesheet', href='../resource/css/style.css')
+
 block content
   .container !{content}
+
+block homeref
+  a.links(href="../../") Home

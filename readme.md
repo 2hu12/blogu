@@ -4,6 +4,12 @@ blogu is not that light but simple and fresh as a blog engine, which is
 inspired by some existing static blog framework.
 
 
+## Prerequisites
+
++ *nix os
++ node
++ gulp(global installed)
+
 ## Document
 
 #### 1. Installation
@@ -26,6 +32,7 @@ Config your `config.json`
 | email          | for contact          |
 | link           | some other link      |
 | git            | git page repo        |
+| branch         | git repo branch      |
 | domain(option) | blog domain          |
 
 and then

@@ -6,5 +6,6 @@
 , "email": "yourname@example.com"
 , "link": "http://whatever.com"
 , "git": "git@github.com:example/example.github.io.git"
+, "branch": "master"
 , "domain": "my.domain"
 }
