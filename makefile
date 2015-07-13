@@ -4,13 +4,16 @@ BRANCH = $(shell cat config.json | grep -o \"branch.*\" | cut -d"\"" -f4)
 REPOTYPE = $(shell cat config.json | grep -o \"repotype.*\" | cut -d"\"" -f4)
 DOMAIN = $(shell cat config.json | grep -o \"domain.*\" | cut -d"\"" -f4)
 TESTBR = $(shell ls dist/.git/refs/heads | grep "$(BRANCH)")
+TESTREMOTE = $(shell g remote -v)
 init:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
 	cp -R example/asset/source source && \
 	cd dist && \
 	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
 	if [ ! -d ".git" ]; then git init; fi && \
-	if [ ! -z "${GIT}" ]; then git remote add origin ${GIT}; fi && \
+	if [ ! -z "${GIT}" ] && [ -z "${TESTREMOTE}" ]; then \
+		git remote add origin ${GIT}; \
+	fi && \
 	if [ ! -z "${BRANCH}" ] && [ ! -z "${TESTBR}" ]; then \
 		git checkout ${BRANCH}; \
 	fi && \
@@ -19,10 +22,13 @@ init:
 	fi && \
 	cd .. && npm install
 
-editgit:
-	if [ ! -d "dist" ]; then mkdir dist; fi && \
+addgit:
 	cd dist && \
 	if [ ! -z "${GIT}" ]; then git remote add origin ${GIT}; fi
+
+editgit:
+	cd dist && \
+	if [ ! -z "${GIT}" ]; then git remote set-url origin ${GIT}; fi
 
 adddomain:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
