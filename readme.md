@@ -1,7 +1,7 @@
 # BLOGU
 
-blogu is not that light but simple and fresh as a blog engine, which is
-inspired by some existing static blog framework.
+Blogu is not that light but simple and fresh as a blog engine, which is
+inspired by some existing static blog framework. [Demo][]
 
 
 ## Prerequisites
@@ -39,7 +39,7 @@ $ cp example/config.json config.json
 | branch         | git repo branch      |
 | domain(option) | blog domain          |
 
-> tip: You can use github and gitcafe pages service, so the branch option is
+> Tip: You can use github and gitcafe pages service, so the branch option is
 required, and if you use github page for project, `branch` should be `gh-pages`,
 and for gitcafe, `gitcafe-pages`. Or if you want to consume the only user `io`
 page, branch should be `master`.
@@ -49,8 +49,8 @@ then
 ```bash
 $ make init
 ```
-> tip: The `make init` better use for only once. If you forget some
-configuration, check out the [remedy](#8-some-remedy).
+> Tip: The `make init` better use for only once. If you forget some
+configuration, check out the [remedy][].
 
 
 #### 3. Write A New Post
@@ -121,3 +121,5 @@ $ make editbr
 ---
 Hope you enjoy it : )
 
+[Demo]: http://2hu.gitcafe.io/blogudemo
+[remedy]: #8-some-remedy

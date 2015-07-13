@@ -1,8 +1,14 @@
 # BLOGU
 
-blogu is not that light but simple and fresh as a blog engine, which is
-inspired by some existing static blog framework.
+Blogu is not that light but simple and fresh as a blog engine, which is
+inspired by some existing static blog framework. [Demo][]
 
+
+## Prerequisites
+
++ *nix os
++ node
++ gulp(global installed)
 
 ## Document
 
@@ -13,9 +19,13 @@ $ mkdir myblog
 $ git clone https://github.com/zhulongzheng/blogu.git myblog
 ```
 
-#### 2. Configiration
+#### 2. Configuration
 
 Config your `config.json`
+```bash
+$ cd myblog
+$ cp example/config.json config.json
+```
 
 | OPTIONS        | FOR                  |
 | :------------- | :------------------- |
@@ -26,14 +36,21 @@ Config your `config.json`
 | email          | for contact          |
 | link           | some other link      |
 | git            | git page repo        |
+| branch         | git repo branch      |
 | domain(option) | blog domain          |
 
-and then
+> Tip: You can use github and gitcafe pages service, so the branch option is
+required, and if you use github page for project, `branch` should be `gh-pages`,
+and for gitcafe, `gitcafe-pages`. Or if you want to consume the only user `io`
+page, branch should be `master`.
+
+then
 
 ```bash
-$ cd myblog
 $ make init
 ```
+> Tip: The `make init` better use for only once. If you forget some
+configuration, check out the [remedy][].
 
 
 #### 3. Write A New Post
@@ -83,6 +100,26 @@ $ make d
 $ make dev
 ```
 
+#### 8. Some Remedy
+Reconfig your config.json.
+
+In case you forget to config git repo befor you run `make init`:
+```bash
+$ make addgit
+```
+
+In case you want to reconfig git repo:
+```bash
+$ make editgit
+```
+
+In case you want to reconfig git branch:
+```bash
+$ make editbr
+```
+
 ---
 Hope you enjoy it : )
 
+[Demo]: http://2hu.gitcafe.io/blogudemo
+[remedy]: #8-some-remedy
