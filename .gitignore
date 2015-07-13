@@ -2,6 +2,6 @@
 Thumbs.db
 *.log
 node_modules/
-./dist*/
-./config.json
-./source/*
+dist/
+config.json
+source/
