@@ -7,6 +7,7 @@ TESTBR = $(shell ls dist/.git/refs/heads | grep "$(BRANCH)")
 NOW = $(shell date "+%Y-%m-%d %H:%M:%S")
 init:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
+	cp example/asset/deploy_readme.md dist/readme.md && \
 	cp -R example/asset/source source && \
 	cd dist && \
 	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
@@ -59,8 +60,12 @@ gen:
 g:
 	gulp gen --silent
 
+GITST = $(shell git status | grep "working directory clean")
 deploy:
-	cd dist && git add --all && git commit -a -m "Site Update: ${NOW}" && \
+	cd dist && git add --all && \
+	if [ -z "${GITST}" ]; then \
+		git commit -a -m "Site Update: ${NOW}"; \
+	fi && \
 	if [ ! -z "${BRANCH}" ]; then \
 		git push -f origin "${BRANCH}"; \
 	else \
