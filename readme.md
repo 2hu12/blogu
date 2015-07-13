@@ -1,6 +1,6 @@
-# 2BLOGU
+# BLOGU
 
-2blogu is not that light but simple and fresh as a blog engine, which is
+blogu is not that light but simple and fresh as a blog engine, which is
 inspired by some existing static blog framework.
 
 
@@ -10,7 +10,7 @@ inspired by some existing static blog framework.
 
 ```bash
 $ mkdir myblog
-$ git clone https://github.com/zhulongzheng/2blogu.git myblog
+$ git clone https://github.com/zhulongzheng/blogu.git myblog
 ```
 
 #### 2. Configiration

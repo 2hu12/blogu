@@ -1,5 +1,5 @@
 ## Who
 
-Default werid theme for 2blogu.
+Default werid theme for blogu.
 
 YAY!!
