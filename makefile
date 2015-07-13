@@ -7,7 +7,7 @@ TESTBR = $(shell ls dist/.git/refs/heads | grep "$(BRANCH)")
 NOW = $(shell date "+%Y-%m-%d %H:%M:%S")
 init:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
-	cp example/asset/deploy_readme.md dist/readme.md && \
+	cp example/deploy_readme.md dist/readme.md && \
 	cp -R example/asset/source source && \
 	cd dist && \
 	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
