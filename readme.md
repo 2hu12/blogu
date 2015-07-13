@@ -1,7 +1,7 @@
 # BLOGU
 
 Blogu is not that light but simple and fresh as a blog engine, which is
-inspired by some existing static blog framework. [Demo][]
+inspired by some existing static blog framework. [Demo][] and [My Blog][].
 
 
 ## Prerequisites
@@ -51,6 +51,9 @@ $ make init
 ```
 > Tip: The `make init` better use for only once. If you forget some
 configuration, check out the [remedy][].
+
+Also you can "decorate" it by switching `theme/default/avatar.png` and
+`theme/default/favicon.ico`.
 
 
 #### 3. Write A New Post
@@ -127,4 +130,5 @@ $ make adddomain
 Hope you enjoy it : )
 
 [Demo]: http://2hu.gitcafe.io/blogudemo
+[My Blog]: http://2hu.me
 [remedy]: #8-some-remedy
