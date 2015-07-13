@@ -4,14 +4,13 @@ BRANCH = $(shell cat config.json | grep -o \"branch.*\" | cut -d"\"" -f4)
 REPOTYPE = $(shell cat config.json | grep -o \"repotype.*\" | cut -d"\"" -f4)
 DOMAIN = $(shell cat config.json | grep -o \"domain.*\" | cut -d"\"" -f4)
 TESTBR = $(shell ls dist/.git/refs/heads | grep "$(BRANCH)")
-TESTREMOTE = $(shell g remote -v)
 init:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
 	cp -R example/asset/source source && \
 	cd dist && \
 	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
 	if [ ! -d ".git" ]; then git init; fi && \
-	if [ ! -z "${GIT}" ] && [ -z "${TESTREMOTE}" ]; then \
+	if [ ! -z "${GIT}" ] && [ -z "$(shell cd dist && g remote -v)" ]; then \
 		git remote add origin ${GIT}; \
 	fi && \
 	if [ ! -z "${BRANCH}" ] && [ ! -z "${TESTBR}" ]; then \
