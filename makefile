@@ -6,7 +6,7 @@ DOMAIN = $(shell cat config.json | grep -o \"domain.*\" | cut -d"\"" -f4)
 TESTBR = $(shell ls dist/.git/refs/heads | grep "$(BRANCH)")
 init:
 	if [ ! -d "dist" ]; then mkdir dist; fi && \
-	cp -R example/asset source && \
+	cp -R example/asset/source source && \
 	cd dist && \
 	if [ ! -z "${DOMAIN}" ]; then echo ${DOMAIN} > CNAME; fi && \
 	if [ ! -d ".git" ]; then git init; fi && \
