@@ -1,4 +1,4 @@
-# VERY HACK
+# VERY HACKY
 GIT = $(shell cat config.json | grep -o \"git.*\" | cut -d"\"" -f4)
 BRANCH = $(shell cat config.json | grep -o \"branch.*\" | cut -d"\"" -f4)
 REPOTYPE = $(shell cat config.json | grep -o \"repotype.*\" | cut -d"\"" -f4)
